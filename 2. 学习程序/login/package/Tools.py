@@ -38,6 +38,6 @@ def ClearConsole():
 
 def StopConsole():
     if platform.platform()[:7] == 'Windows':
-        os.system('read')
+        os.system('pause')
     else:
         os.system('read')
