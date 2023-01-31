@@ -14,14 +14,11 @@ def encipherment(email, password) -> str:
      - 加密方法md5
      - 把邮箱和密码拼接加密
     """
-    """
-    # 实现:
-    # md5_password = md5()
-    # md5_password.update(bytes(email + password, encoding='utf-8'))
-    # md5_password = md5_password.hexdigest()
-    # return str(md5_password)
-    """
-    return str(password('md5', bytes(email + password)).hexdigest())
+    md5_password = md5()
+    md5_password.update(bytes(email + password, encoding='utf-8'))
+    md5_password = md5_password.hexdigest()
+    return str(md5_password)
+  
 
 class Account:
     def __init__(self, name, email, password, brith, location):
